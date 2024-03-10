@@ -13,9 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Fetch upstream changes
-        run: git fetch upstream
-
       - name: Merge upstream changes
         run: git merge upstream/main
 
