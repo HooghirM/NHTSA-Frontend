@@ -13,11 +13,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Add organization repository as remote
+        run: git remote add upstream https://github.com/MAHA-Software-Engineering/NHTSA-Frontend.git
+
       - name: Fetch upstream changes
-        run: git fetch upstream main:MAHA-Software-Engineering/NHTSA-Frontend
+        run: git fetch upstream
 
       - name: Merge upstream changes
-        run: git merge MAHA-Software-Engineering/NHTSA-Frontend
+        run: git merge upstream/main
 
       - name: Push changes to fork
         run: |
