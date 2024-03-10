@@ -20,7 +20,7 @@ jobs:
         run: git fetch upstream
 
       - name: Merge upstream changes
-        run: git merge upstream/main
+        run: git merge --allow-unrelated-histories upstream/main      
 
       - name: Push changes to fork
         run: |
