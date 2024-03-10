@@ -16,6 +16,11 @@ jobs:
       - name: Add organization repository as remote
         run: git remote add upstream https://github.com/MAHA-Software-Engineering/NHTSA-Frontend.git
 
+      - name: Set Git identity
+        run: |
+          git config --global user.email "hooghirm29@gmail.com"
+          git config --global user.name "hooghir"  
+
       - name: Fetch upstream changes
         run: git fetch upstream
 
