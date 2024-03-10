@@ -17,7 +17,7 @@ jobs:
         run: git fetch https://github.com/MAHA-Software-Engineering/NHTSA-Frontend.git
 
       - name: Merge upstream changes
-        run: git merge https://github.com/MAHA-Software-Engineering/NHTSA-Frontend.git/main
+        run: git merge https://github.com/MAHA-Software-Engineering/NHTSA-Frontend.git
 
       - name: Push changes to fork
         run: |
