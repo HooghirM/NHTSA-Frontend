@@ -30,3 +30,6 @@ jobs:
       - name: Push changes to fork
         run: |
           git push origin HEAD:main
+        env:
+          GITHUB_TOKEN: ${{ secrets.nhtsa_fork }}
+      
