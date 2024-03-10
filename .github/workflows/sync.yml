@@ -13,10 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Fetch upstream changes
+        run: git fetch https://github.com/MAHA-Software-Engineering/NHTSA-Frontend.git
+
       - name: Merge upstream changes
-        run: |
-          git fetch upstream
-          git merge --ff-only upstream/main || echo "No new changes to merge"
+        run: git merge https://github.com/MAHA-Software-Engineering/NHTSA-Frontend.git/main
 
       - name: Push changes to fork
         run: |
