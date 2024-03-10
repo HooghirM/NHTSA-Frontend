@@ -14,10 +14,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Fetch upstream changes
-        run: git fetch https://github.com/MAHA-Software-Engineering/NHTSA-Frontend.git
+        run: git fetch upstream main:MAHA-Software-Engineering/NHTSA-Frontend
 
       - name: Merge upstream changes
-        run: git merge https://github.com/MAHA-Software-Engineering/NHTSA-Frontend.git
+        run: git merge MAHA-Software-Engineering/NHTSA-Frontend
 
       - name: Push changes to fork
         run: |
