@@ -14,7 +14,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Merge upstream changes
-        run: git merge upstream/main
+        run: |
+          git fetch upstream
+          git merge --ff-only upstream/main || echo "No new changes to merge"
 
       - name: Push changes to fork
         run: |
